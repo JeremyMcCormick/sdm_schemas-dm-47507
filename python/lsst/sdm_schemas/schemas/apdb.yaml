@@ -2015,6 +2015,10 @@ tables:
     "@id": "#DiaSource.isDipole"
     datatype: boolean
     description: Object determined to be a dipole.
+  - name: dipoleFitAttempted
+    "@id": "#DiaSource.dipoleFitAttempted"
+    datatype: boolean
+    description: Attempted classification of object to be a dipole.
   - name: time_processed
     "@id": "#DiaSource.time_processed"
     datatype: timestamp

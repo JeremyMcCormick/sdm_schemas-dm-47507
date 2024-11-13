@@ -7801,7 +7801,12 @@ tables:
   - name: isDipole
     "@id": "#DiaSource.isDipole"
     datatype: boolean
-    description: Flag indicating diaSource is classified as a dipole.
+    description: Classification of diaSource as a dipole.
+    fits:tunit:
+  - name: dipoleFitAttempted
+    "@id": "#DiaSource.dipoleFitAttempted"
+    datatype: boolean
+    description: Attempted classification of object to be a dipole.
     fits:tunit:
   - name: time_processed
     "@id": "#DiaSource.time_processed"
