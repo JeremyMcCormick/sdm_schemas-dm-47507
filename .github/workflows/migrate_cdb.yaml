@@ -1,4 +1,4 @@
-name: Trigger Database Migrations
+name: Trigger ConsDB Database Migrations
 
 on:
   pull_request:
@@ -14,25 +14,14 @@ jobs:
       - name: Checkout PR repo
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref }}
+          ref: ${{ github.event.pull_request.merge_commit_sha }}
           path: pr
-          fetch-path: 0
 
       - name: Checkout main repo
         uses: actions/checkout@v4
         with:
+          ref: ${{ github.event.pull_request.base.sha }}
           path: main
-          ref: main
-          fetch-depth: 0
-
-      - name: Reset main to commit before merge
-        run: |
-          cd main
-          git fetch origin main
-          git reset --hard ${{ github.event.pull_request.base.sha }}
-          echo "Reset main to commit ${{ github.event.pull_request.base.sha }}"
-          echo "Last commit message:"
-          git log -1 --pretty=format:"%s"
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -71,10 +60,10 @@ jobs:
             fi
           done
           if [ ${#CHANGED_FILES[@]} -eq 0 ]; then
-            echo "No schema files changed"
+            echo "No cdb schema files changed"
             exit 0
           else
-            echo "Changed schema files: ${CHANGED_FILES[@]}"
+            echo "Changed cdb schema files: ${CHANGED_FILES[@]}"
           fi
 
       - name: Trigger migration workflow in consdb repository
