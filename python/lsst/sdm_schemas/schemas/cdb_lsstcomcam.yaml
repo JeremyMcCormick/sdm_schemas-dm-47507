@@ -1655,4 +1655,4 @@ tables:
     "@id": "#ccdexposure_quicklook.dummy_column6"
     datatype: string
     length: 64
-    description: Dummy column for testing.6
+    description: Dummy column for testing.
