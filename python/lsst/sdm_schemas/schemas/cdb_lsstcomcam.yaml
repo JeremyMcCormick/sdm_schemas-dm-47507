@@ -1651,7 +1651,7 @@ tables:
     description: Median postISR pixel value.
     ivoa:unit: count
     ivoa:ucd: phot;phys.electron
-  - name: dummy_column6
+  - name: dummy_column7
     "@id": "#ccdexposure_quicklook.dummy_column6"
     datatype: string
     length: 64
