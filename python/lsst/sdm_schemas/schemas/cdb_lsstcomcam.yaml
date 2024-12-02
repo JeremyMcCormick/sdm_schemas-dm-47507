@@ -1651,3 +1651,7 @@ tables:
     description: Median postISR pixel value.
     ivoa:unit: count
     ivoa:ucd: phot;phys.electron
+  - name: dummy_col2
+    "@id": "#ccdvisit1_quicklook.dummy_col2"
+    datatype: int
+    description: Dummy column 2
