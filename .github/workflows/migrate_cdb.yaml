@@ -85,10 +85,10 @@ jobs:
           done < diff_files.txt
           if [ ${#CHANGED_FILES[@]} -eq 0 ]; then
             echo "No cdb schema files changed"
-            echo "::set-output name=should_trigger::false"
+            echo "should_trigger=false" >> $GITHUB_ENV
           else
             echo "Changed cdb schema files: ${CHANGED_FILES[@]}"
-            echo "::set-output name=should_trigger::true"
+            echo "should_trigger=true" >> $GITHUB_ENV
           fi
 
       - name: Trigger migration workflow in consdb repository
