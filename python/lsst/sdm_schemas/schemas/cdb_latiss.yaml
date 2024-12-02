@@ -1296,4 +1296,4 @@ tables:
   - name: dummy_col1
     "@id": "#ccdvisit1_quicklook.dummy_col1"
     datatype: int
-    description: Dummy column 1.
+    description: Dummy column 1
