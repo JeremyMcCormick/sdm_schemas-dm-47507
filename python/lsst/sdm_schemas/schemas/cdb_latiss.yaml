@@ -1293,8 +1293,3 @@ tables:
     datatype: float
     description: Maximum distance of an unmasked pixel to its nearest model PSF star.
     ivoa:unit: pixel
-  - name: dummy_col1
-    "@id": "#ccdvisit1_quicklook.dummy_col1"
-    datatype: float
-    description: Dummy column 1
-    ivoa:unit: pixel
